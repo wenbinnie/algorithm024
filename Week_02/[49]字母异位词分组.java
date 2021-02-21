@@ -1,6 +1,13 @@
 /**
  * 切题四件套
  *
+ *
+ * 复杂度分析
+ *
+ * 时间复杂度：O(nk \log k)O(nklogk)，其中 nn 是 \textit{strs}strs 中的字符串的数量，kk 是 \textit{strs}strs 中的字符串的的最大长度。需要遍历 nn 个字符串，对于每个字符串，需要 O(k \log k)O(klogk) 的时间进行排序以及 O(1)O(1) 的时间更新哈希表，因此总时间复杂度是 O(nk \log k)O(nklogk)。
+ *
+ * 空间复杂度：O(nk)O(nk)，其中 nn 是 \textit{strs}strs 中的字符串的数量，kk 是 \textit{strs}strs 中的字符串的的最大长度。需要用哈希表存储全部字符串。
+ *
  */
 
 class Solution {
@@ -19,6 +26,8 @@ class Solution {
         return new ArrayList<>(map.values());
     }
 }
+
+
 
     /**
      * 不用排序，判断一个字符串相等
